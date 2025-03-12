@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de Empleados</h1>
+    </header>
+
+    <main>
+        <section id="formulario">
+            <h2>Agregar / Editar Empleado</h2>
+            <form id="empleado-form">
+                <input type="hidden" id="id">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="puesto" placeholder="Puesto" required>
+                <input type="number" id="salario" placeholder="Salario" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section id="lista-empleados">
+            <h2>Lista de Empleados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Puesto</th>
+                        <th>Salario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="empleados-table"></tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
